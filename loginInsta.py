@@ -16,7 +16,7 @@ input_username = driver.find_element_by_xpath(input_username_XP)
 (ActionChains(driver)
     .move_to_element(input_username)
     .click()
-    .send_keys('Bigmak.mak')
+    .send_keys('')#name user
     .perform())
 
 #time wait for security
@@ -29,7 +29,7 @@ input_password = driver.find_element_by_xpath(input_password_XP)
 (ActionChains(driver)
     .move_to_element(input_password)
     .click()
-    .send_keys('estudo')
+    .send_keys('')#password user
     .send_keys(Keys.ENTER)
     .perform())
 #time wait for load page
