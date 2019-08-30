@@ -21,7 +21,7 @@ test={
 }
 '''
 #set site to requests
-response = requests.get("https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=b197f3a0d3a183ac876c4d13b5ab295790c1509c")
+response = requests.get("https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=")
 date = response.json()
 #function converting data in sha1
 def sha1(data):
@@ -51,7 +51,7 @@ with open("answer.json","w") as f:
 #now, this part submit file to site
 answer = {'answer':open("answer.json","rb")}
 
-send = requests.post('https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=b197f3a0d3a183ac876c4d13b5ab295790c1509c',
+send = requests.post('https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=',
                      files=answer)
 
 print(send.status_code)
